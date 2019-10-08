@@ -1,22 +1,50 @@
-.App {
+body{
+  box-sizing: border-box;
+}
+
+.PageWrapper{
+  margin: 0 auto;
+  padding: 10px 80px;
+}
+
+.WeatherNav{
+  display:flex;
+  flex-direction: row;
+
+  align-content: center;
+  justify-content: space-around;
+
+  margin: 20px auto;
+  max-width: 1080px;
+  width:100%;
+}
+
+.WeatherNav_Item{
+  border: solid 1px;
+  color: black;
+  font-size: 20px;
+  margin: 0 20px;
+  padding: 10px;
+}
+
+.WeatherNav__Item--active{
+  background-color: yellow;
+  color: red;
+}
+
+.successMessage{
+  background-color:rgba(179, 255, 191);
+  border: 1px solid green;
+  border-radius: 5px;
+  display: block;
+  margin: 20px 0;
+  padding: 5px;
+  position:relative;
   text-align: center;
+  transition: background-color 200ms ease, top 200ms ease;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
+.successMessage:hover{
+  background-color: rgba(179,255,191,0.5);
+  top:5px;
 }
