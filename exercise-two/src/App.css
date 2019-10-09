@@ -3,33 +3,53 @@ body{
 }
 
 .PageWrapper{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0 auto;
-  padding: 10px 80px;
+  padding: 10px 40px;
 }
 
 .WeatherNav{
   display:flex;
-  flex-direction: row;
+  flex-direction: column;
 
   align-content: center;
   justify-content: space-around;
 
-  margin: 20px auto;
-  max-width: 1080px;
+  /* margin: 20px auto; */
+  max-width: 180px;
+
+  position: absolute;
+
   width:100%;
 }
 
-.WeatherNav_Item{
-  border: solid 1px;
-  color: black;
+.WeatherNav__Item{
+  background-color: rgba(55, 107, 109, 0.8);
+  border-radius: 5px;
+  color: white;
   font-size: 20px;
-  margin: 0 20px;
+  margin: 10px 20px ;
   padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 300ms ease;
+}
+
+.WeatherNav__Item:hover{
+  background-color: rgba(106, 131, 114, 0.8);
 }
 
 .WeatherNav__Item--active{
-  background-color: yellow;
-  color: red;
+  background-color: rgba(106, 131, 114, 0.8);
+  color:white;
+}
+
+.WeatherContent{
+  margin-left: 200px;
+}
+
+.svg-inline--fa{
+  font-size: -webkit-xxx-large;
 }
 
 .successMessage{
@@ -38,13 +58,15 @@ body{
   border-radius: 5px;
   display: block;
   margin: 20px 0;
+  max-width: 300px;
   padding: 5px;
   position:relative;
   text-align: center;
+  top: 5px;
   transition: background-color 200ms ease, top 200ms ease;
 }
 
 .successMessage:hover{
   background-color: rgba(179,255,191,0.5);
-  top:5px;
+  top:0px;
 }
